@@ -8,7 +8,7 @@ module RailsJsHelper
       images = load_config["images"].to_a
       Hash[
         images.map do |path|
-          [path, ActionController::Base.helpers.image_path(path)]
+          [path, ActionController::Base.helpers.image_url(path)]
         end
       ]
     end
@@ -17,7 +17,7 @@ module RailsJsHelper
       assets = load_config["assets"].to_a
       Hash[
         assets.map do |path|
-          [path, ActionController::Base.helpers.image_path(path)]
+          [path, ActionController::Base.helpers.image_url(path)]
         end
       ]
     end
